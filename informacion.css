@@ -1,0 +1,71 @@
+/* Sección Información (20 tarjetas compactas) */
+
+:root{
+  --card-bg: var(--surface);
+  --card-bg-hover: rgba(255,255,255,0.92);
+  --card-text: var(--text);
+  --img-h: 140px; /* altura de imagen */
+}
+
+section.information{
+  width: min(1100px, 92%);
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px;
+  align-items: stretch;
+  padding: 0;
+}
+
+article.info-card{
+  background-color: var(--card-bg);
+  color: var(--card-text);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,.10);
+  transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+}
+
+article.info-card:hover{
+  background-color: var(--card-bg-hover);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.16);
+}
+
+article.info-card img{
+  width: 100%;
+  height: var(--img-h);
+  object-fit: cover;
+  display: block;
+}
+
+article.info-card div{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 12px 12px;
+}
+
+article.info-card h3{
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+article.info-card p{
+  font-size: 13px;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+@media (max-width: 700px){
+  section.information{
+    width: 100%;
+    padding: 0 10px;
+    grid-template-columns: 1fr;
+  }
+
+  :root{ --img-h: 160px; }
+
+  article.info-card:hover{ transform: none; }
+}

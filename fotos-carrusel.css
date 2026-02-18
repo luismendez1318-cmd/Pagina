@@ -1,0 +1,13 @@
+/* Estilos Carrusel */
+
+.carrusel-img {
+    background: url("../logosConectar/Entreg_a.png") center no-repeat;
+}
+
+.carrusel-img1 {
+    background: url("../logosConectar/Siste.png") center no-repeat;
+}
+
+.carrusel-img2 {
+    background: url("../logosConectar/ISO.jpg") center no-repeat;
+}
