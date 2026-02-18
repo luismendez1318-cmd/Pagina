@@ -1,0 +1,74 @@
+/* Estilos Encabezado */
+
+header{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.header-escritorio{
+  background-color: var(--surface);
+  backdrop-filter: blur(6px);
+  padding: 0 50px;
+  box-shadow: var(--shadow);
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo{
+  width: 70px;
+  cursor: pointer;
+  transition-duration: 300ms;
+}
+
+.header-logo:hover,
+.footer-logo:hover{
+  transform: translateY(-3px);
+}
+
+.header-nav ul{
+  display: flex;
+  gap: 20px;
+}
+
+.header-nav a{
+  padding: 14px 4px;
+  display: inline-block;
+}
+
+.header-nav a:hover{
+  border-bottom: 2px solid var(--primary);
+  color: var(--primary);
+  transition-duration: 100ms;
+}
+
+.menu-hamburguesa{
+  display: none;
+  font-size: 30px;
+  color: var(--muted);
+  background-color: transparent;
+  border: none;
+}
+
+.menu-hamburguesa-nav{ display: none; }
+
+.menu-hamburguesa-nav ul{
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--surface);
+  backdrop-filter: blur(6px);
+  box-shadow: var(--shadow);
+}
+
+.visible{ display: block; }
+
+@media (max-width: 700px){
+  header{ padding: 0; }
+  .header-escritorio{ padding: 0 10px; }
+  .menu-hamburguesa{ display: block; }
+  .header-nav{ display: none; }
+}

@@ -1,0 +1,38 @@
+/* Estilos Banner */
+
+section.banner{
+  background-color: var(--surface);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+}
+
+section.banner h1{ color: var(--text); }
+section.banner p{ color: var(--muted); }
+
+section.banner{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+  gap: 20px;
+}
+
+section.banner div{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 16px;
+  height: auto;
+  width: 50%;
+}
+
+section.banner img{
+  width: 40%;
+  border-radius: calc(var(--radius) - 2px);
+}
+
+@media (max-width: 700px){
+  section.banner{ flex-direction: column-reverse; }
+  section.banner div,
+  section.banner img{ width: 100%; }
+}

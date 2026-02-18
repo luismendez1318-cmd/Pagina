@@ -1,0 +1,121 @@
+@import url("./encabezado.css");
+@import url("./banner.css");
+@import url("./fotos-carrusel.css");
+@import url("./carrusel.css");
+@import url("./informacion.css");
+@import url("./pie-de-pagina.css");
+@import url("./contacto.css");
+
+/* =========================
+   Colores corporativos (marca)
+   Cambia estos HEX si lo deseas
+   ========================= */
+:root{
+  --bg: #F8FAFC;
+  --surface: rgba(255,255,255,0.78);
+  --text: #111827;
+  --muted: #6B7280;
+  --border: rgba(17,24,39,0.14);
+
+  --primary: #64C0BA;     /* menta */
+  --secondary: #E64089;   /* rosa */
+  --accent: #FFD166;      /* dorado suave */
+  --info: #39B6E8;        /* azul */
+
+  --shadow: 0 6px 16px rgba(0,0,0,.12);
+  --radius: 12px;
+}
+
+/* Estilos Globales */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  color: var(--text);
+
+  /* Fondo sin puntos */
+  background-color: var(--bg);
+  background-image: none;
+}
+
+ul{ list-style: none; }
+
+a{
+  color: unset;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+section{
+  padding: 10px 50px;
+}
+
+h1{
+  font-size: 50px;
+  font-weight: 700;
+}
+
+h2{
+  font-size: 25px;
+}
+
+/* Estilos útiles */
+.section-title{
+  text-align: center;
+  color: var(--text);
+  margin-top: 10px;
+}
+
+.section-title::after{
+  content:"";
+  display:block;
+  width: 90px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--primary);
+  margin: 10px auto 0;
+}
+
+/* Botón principal (para CTA) */
+.btn-primary{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 16px;
+  width: fit-content;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.btn-primary:hover{
+  transform: translateY(-2px);
+  filter: brightness(0.95);
+}
+
+.btn-primary:active{
+  transform: translateY(0);
+}
+
+.reverse-flexrow{ flex-direction: row-reverse; }
+
+@media (max-width: 700px){
+  body{
+    text-align: center;
+    background-size: cover;
+  }
+
+  h1{ font-size: 2em; }
+
+  section{ padding: 5px 10px; }
+
+  .btn-primary{ width: 100%; }
+}
